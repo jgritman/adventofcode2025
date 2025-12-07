@@ -25,6 +25,6 @@ git add --all
 touch "$directory_name/sample_input.txt"
 
 url=https://adventofcode.com/2025/day/$1/input
-curl -o "$directory_name/input.txt" "$url" -H 'Cookie session=53616c7465645f5f60874cd0b6c52d3a789ccae497f6cac1aa8c80757256d34b4f9cdefabda5079d297951e2731a549c7767dd42de102ba59e6f455dd68a58da'
+curl -o "$directory_name/input.txt" "$url" -H 'Cookie: _ga=GA1.2.1896476050.1764532081; _gid=GA1.2.1819159324.1764532081; session=53616c7465645f5fe7dd26baff672b211fd9f760ef5e917fc2da9981797434ed7f50f40ace480e5111d7f0649255a78305d8c1f41952692cea25bc5de8dcd694; _ga_MHSNPJKWC7=GS2.2.s1764534538$o2$g1$t1764534548$j50$l0$h0'
 
 cd $directory_name
