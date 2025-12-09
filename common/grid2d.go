@@ -5,6 +5,14 @@ import (
     "os"
 )
 
+type Coord struct {
+	Row, Col int
+}
+
+func NewCoord(row, col int) Coord {
+    return Coord{Row: row, Col: col}
+}
+
 var Directions = [8][2]int{
     {-1, -1},
     {-1,  0},
