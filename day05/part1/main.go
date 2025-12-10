@@ -107,21 +107,21 @@ func (it *IntervalTree) FindAll(point int) []Interval {
 }
 
 func findAll(node *Node, point int, results *[]Interval) {
-		if node == nil {
-				return
-		}
+	if node == nil {
+			return
+	}
 
-		if point > node.MaxHigh {
-				return
-		}
+	if point > node.MaxHigh {
+			return
+	}
 
-		findAll(node.Left, point, results)
+	findAll(node.Left, point, results)
 
-		if point >= node.Low && point <= node.High {
-				*results = append(*results, node.Interval)
-		}
+	if point >= node.Low && point <= node.High {
+			*results = append(*results, node.Interval)
+	}
 
-		if node.Right != nil && point <= node.Right.MaxHigh {
-				findAll(node.Right, point, results)
-		}
+	if node.Right != nil && point <= node.Right.MaxHigh {
+			findAll(node.Right, point, results)
+	}
 }
