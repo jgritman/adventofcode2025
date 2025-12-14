@@ -69,13 +69,10 @@ func main() {
 
 	for i := 0; i < noOfClosest; i++ {
 		distance := distances[i]
-		// fmt.Println(distance)
-		// fmt.Println(distance.DistanceSq)
 		// dumpJunction(distance.A)
 		// dumpJunction(distance.B)
 		if distance.A.CircuitPos == -1 && distance.B.CircuitPos == -1 {
 		  // create a new ciruit if neither connected
-			// fmt.Println("creating new circuit")
 			circuitJunctions := []*Junction { distance.A, distance.B }
 			circuits = append(circuits, circuitJunctions)
 			newCircuitPos := len(circuits) - 1
